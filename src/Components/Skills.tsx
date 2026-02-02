@@ -1,75 +1,63 @@
-import {
-  FaJava,
-  FaReact,
-  FaAws,
-  FaGitAlt,
-  FaDatabase,
-} from "react-icons/fa";
+import React from "react";
+import "./Skills.css";
 
+// react-icons (you already have it installed)
+import { FaJava, FaReact, FaDocker, FaAws, FaGitAlt, FaGithub } from "react-icons/fa";
 import {
   SiSpringboot,
   SiApachekafka,
+  SiTypescript,
   SiKubernetes,
-  SiDocker,
+  SiMysql,
+  SiPostgresql,
+  SiOracle,
 } from "react-icons/si";
 
-const skillRowStyle: React.CSSProperties = {
-  display: "flex",
-  alignItems: "center",
-  gap: "12px",
-  fontSize: "18px",
-  marginBottom: "12px",
+/**
+ * IMPORTANT:
+ * We intentionally type `icon` as `any` to avoid ALL the TS errors you hit:
+ * - TS2786: icon cannot be used as JSX component
+ * - TS2769: createElement overload mismatch with IconType
+ * - TS2503: Cannot find namespace JSX (we don't use JSX.Element anywhere)
+ */
+type Skill = {
+  label: string;
+  icon: any;
 };
 
-const sectionStyle: React.CSSProperties = {
-  maxWidth: "900px",
-  margin: "0 auto",
-};
+const skills: Skill[] = [
+  { label: "Java (8–17)", icon: FaJava },
+  { label: "Spring Boot", icon: SiSpringboot },
+  { label: "Microservices", icon: FaGitAlt },
+  { label: "Apache Kafka", icon: SiApachekafka },
+  { label: "React", icon: FaReact },
+  { label: "TypeScript", icon: SiTypescript },
+  { label: "AWS", icon: FaAws },
+  { label: "Docker", icon: FaDocker },
+  { label: "Kubernetes", icon: SiKubernetes },
+  { label: "MySQL", icon: SiMysql },
+  { label: "PostgreSQL", icon: SiPostgresql },
+  { label: "Oracle", icon: SiOracle },
+  { label: "Git", icon: FaGitAlt },
+  { label: "GitHub", icon: FaGithub },
+  { label: "CI/CD", icon: FaGitAlt },
+];
 
 export default function Skills() {
   return (
-    <section style={{ padding: "80px 24px" }}>
-      <h2 style={{ fontSize: "36px", textAlign: "center", marginBottom: "40px" }}>
-        Skills
-      </h2>
+    <section className="skills">
+      <span className="skills-subtitle">the magic behind</span>
+      <h2 className="skills-title">My Skillset</h2>
 
-      <div style={sectionStyle}>
-        <h3>Backend</h3>
-        <div style={skillRowStyle}>
-          {FaJava({})} Java (8–17)
-        </div>
-        <div style={skillRowStyle}>
-          {SiSpringboot({})} Spring Boot, Microservices
-        </div>
-
-        <h3>Messaging & Streaming</h3>
-        <div style={skillRowStyle}>
-          {SiApachekafka({})} Apache Kafka
-        </div>
-
-        <h3>Frontend</h3>
-        <div style={skillRowStyle}>
-          {FaReact({})} React, TypeScript
-        </div>
-
-        <h3>Cloud & DevOps</h3>
-        <div style={skillRowStyle}>
-          {FaAws({})} AWS
-        </div>
-        <div style={skillRowStyle}>
-          {SiDocker({})} Docker
-        </div>
-        <div style={skillRowStyle}>
-          {SiKubernetes({})} Kubernetes
-        </div>
-
-        <h3>Databases & Tools</h3>
-        <div style={skillRowStyle}>
-          {FaDatabase({})} MySQL, PostgreSQL, Oracle
-        </div>
-        <div style={skillRowStyle}>
-          {FaGitAlt({})} Git, GitHub, CI/CD
-        </div>
+      <div className="skills-cloud">
+        {skills.map((skill) => (
+          <span key={skill.label} className="skill-pill">
+            <span className="skill-icon" aria-hidden="true">
+              {React.createElement(skill.icon as any)}
+            </span>
+            <span className="skill-label">{skill.label}</span>
+          </span>
+        ))}
       </div>
     </section>
   );

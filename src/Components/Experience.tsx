@@ -9,8 +9,8 @@ type ExperienceItem = {
 const experience: ExperienceItem[] = [
   {
     company: "Dell Technologies",
-    role: "Software Engineer / QA Automation Engineer",
-    period: "2023 – 2025",
+    role: "Software Engineer / Full Stack Developer",
+    period: "November 2023 – Present",
     bullets: [
       "Worked on enterprise applications supporting large-scale business workflows.",
       "Collaborated with developers, QA, and stakeholders to validate backend services and APIs.",
@@ -21,8 +21,9 @@ const experience: ExperienceItem[] = [
   },
   {
     company: "DXC Technologies",
-    role: "Senior QA Automation Engineer",
-    period: "2021 – 2023",
+    role: "Software Engineer",
+    period: "August 2021 – August 2023",
+
     bullets: [
       "Delivered automation for enterprise banking and retail systems with strong SLAs.",
       "Validated event-driven and backend services, ensuring data integrity and reliability.",

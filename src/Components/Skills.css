@@ -1,0 +1,140 @@
+/* ===== SKILLS SECTION ===== */
+.skills {
+  padding: 120px 24px;
+  text-align: center;
+  background: linear-gradient(135deg, #eef2ff, #fce7f3);
+  border-radius: 28px;
+  
+}
+
+/* ===== SKILLS HEADER (MATCH ABOUT SECTION) ===== */
+.skills-header {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+}
+
+
+/* Keep subtitle on the right */
+.skills-subtitle {
+  white-space: nowrap;
+}
+
+
+/* ===== CURVED CARD EDGES (LIKE ABOUT) ===== */
+.skills{
+  border-radius: 28px;
+  margin: 70px auto;
+  max-width: 1200px;      /* adjust if you want wider/narrower */
+  width: 100%;/*calc(100% - 48px)*/
+  overflow: hidden;
+}
+
+
+/* Subtitle */
+.skills-subtitle {
+  font-size: 0.9rem;
+  top: 48px;
+  right: 48px;
+  
+
+   background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #a855f7,
+    #ec4899
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient title */
+.skills-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 56px;
+
+  background: linear-gradient(
+    270deg,
+    #3b82f6,
+    #a855f7,
+    #ec4899
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== SKILLS CLOUD ===== */
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Skill pill */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 20px;
+  border-radius: 999px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+/* Icon inside pill */
+.skill-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect */
+.skill-pill:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.25);
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.15),
+    rgba(168, 85, 247, 0.15),
+    rgba(236, 72, 153, 0.15)
+  );
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills {
+    padding: 80px 16px;
+  }
+
+  .skills-title {
+    font-size: 36px;
+  }
+
+  .skill-pill {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+

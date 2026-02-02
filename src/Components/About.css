@@ -1,0 +1,118 @@
+.about-wrapper {
+  max-width: 1400px;
+  margin: 6rem auto;
+  padding: 4rem;
+  background: linear-gradient(
+    135deg,
+    #eef3ff 0%,
+    #f6efff 45%,
+    #ffffff 100%
+  );
+  border-radius: 28px;
+}
+
+/* Header */
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+}
+
+/* Gradient title */
+.about-header {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 56px;
+
+ 
+}
+
+.about-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2f2f2f;
+
+   background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #a855f7,
+    #ec4899
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-header span {
+  font-size: 0.9rem;
+  color: #6b7280;
+
+   background: linear-gradient(
+    90deg,
+    #3b82f6,
+    #a855f7,
+    #ec4899
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Core layout */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+}
+
+/* Auto-expanding image grid */
+.about-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Polaroid cards */
+.about-polaroid {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-polaroid:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 26px rgba(0, 0, 0, 0.15);
+}
+
+/* Image fix — removes extra white space */
+.about-polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Text block */
+.about-text {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-wrapper {
+    padding: 3rem 2rem;
+  }
+}
