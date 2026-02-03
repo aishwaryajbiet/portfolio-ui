@@ -28,11 +28,9 @@ export default function AboutSection() {
 
         <div className="about-text">
           <p>
-            born and raised in portland, oregon, i have soft spots for used books
-            (the best ones come with annotations + bookmarks), black coffee, and
-            all things green! outside of work, you can usually find me
-            experimenting with tofu, trying new boba places, worrying about my
-            carbon footprint, or making pointillist portraits.
+           Beyond code, I’m someone who values creativity and balance. I love painting as a way to slow down and think visually, cooking as a form of experimentation and comfort, and being a proud plant mom, which has taught me patience, consistency, and care—skills that surprisingly translate well into engineering.
+
+I believe great software is built at the intersection of technical excellence, curiosity, and thoughtful problem-solving, and I’m always excited to keep learning, building, and growing—both professionally and personally 🌱
           </p>
         </div>
       </div>
